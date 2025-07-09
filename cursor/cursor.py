@@ -175,7 +175,7 @@ load_dotenv()
 client = OpenAI()
 
 def generate_project_structure(cmd: str):
-    """Execute system commands for project structure generation"""
+
     try:
         result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
         if result.returncode == 0:
@@ -197,7 +197,7 @@ def install_dependencies(cmd: str):
         return f"❌ Error installing dependencies: {str(e)}"
 
 def read_file(filepath):
-    """Read file content with encoding handling"""
+   
     if not isinstance(filepath, str):
         return "❌ read_file expects a file path as a string."
     if not os.path.exists(filepath):
@@ -210,7 +210,7 @@ def read_file(filepath):
         return f"❌ Error reading file: {str(e)}"
 
 def write_file(input):
-    """Write content to file with directory creation"""
+    
     if not isinstance(input, dict):
         return "❌ write_file expects a dict with 'path' and 'content'."
     
@@ -233,7 +233,7 @@ def write_file(input):
         return f"❌ Error writing file: {str(e)}"
 
 def update_file(input):
-    """Update existing file with new content"""
+   
     if not isinstance(input, dict):
         return "❌ update_file expects a dict with 'path' and 'modification'."
 
@@ -256,7 +256,7 @@ def update_file(input):
         return f"❌ Error updating file: {str(e)}"
 
 def list_files(directory="."):
-    """List files in a directory for better context awareness"""
+    
     try:
         files = []
         for root, dirs, filenames in os.walk(directory):
