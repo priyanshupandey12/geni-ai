@@ -164,7 +164,6 @@
 
 from dotenv import load_dotenv
 from openai import OpenAI
-import google.generativeai as genai
 import os
 import json
 import subprocess
