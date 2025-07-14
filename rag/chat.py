@@ -1,3 +1,4 @@
+# flake8: noqa
 from dotenv import load_dotenv
 from langchain_openai import OpenAIEmbeddings
 from langchain_qdrant import QdrantVectorStore
@@ -13,7 +14,7 @@ embedding_model=OpenAIEmbeddings(
 
 
 vectot_db=QdrantVectorStore.from_existing_collection(
-    url="http://localhost:6333",
+    url="http://vector-db:6333",
     collection_name="learning_rag",
     embedding=embedding_model
 )

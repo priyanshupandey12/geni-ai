@@ -1,3 +1,4 @@
+# flake8: noqa
 from dotenv import load_dotenv
 from pathlib import Path
 from langchain_community.document_loaders import PyPDFLoader
@@ -29,7 +30,7 @@ embedding_model=OpenAIEmbeddings(
 
 vector_store=QdrantVectorStore.from_documents(
     documents=split_docs,
-    url="http://localhost:6333",
+    url="http://vector-db:6333",
     collection_name="learning_rag",
     embedding=embedding_model
 )
