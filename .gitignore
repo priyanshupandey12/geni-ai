@@ -1,2 +1,16 @@
 .env
-.my_env
+
+
+# Ignore virtual environment
+my_env/
+venv/
+
+# Ignore environment variable files
+.env
+
+# Python bytecode and cache
+__pycache__/
+*.pyc
+
+# OS metadata files
+.DS_Store
